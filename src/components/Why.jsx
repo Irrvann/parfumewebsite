@@ -1,33 +1,43 @@
 import React from 'react'
 
 const Why = () => {
+  const reasons = [
+    {
+      icon: "fas fa-fingerprint",
+      title: "Karakter Kuat",
+      desc: "Setiap varian dirancang memiliki signature scent yang meninggalkan kesan mendalam."
+    },
+    {
+      icon: "fas fa-flask",
+      title: "Ingredients Premium",
+      desc: "Diformulasikan dengan bibit parfum terbaik untuk ketahanan aroma hingga 12 jam."
+    },
+    {
+      icon: "fas fa-users",
+      title: "Best Seller",
+      desc: "Ribuan pria telah mempercayakan aroma hariannya kepada kami. Kualitas teruji."
+    }
+  ]
+
   return (
     <section className="why-section">
       <div className="container">
-        <h2>Mengapa Men Parfume?</h2>
-        <ul className="why-list">
-          <li>
-            <i className="fas fa-star icon" aria-hidden></i>
-            <div>
-              <strong>Karakter kuat</strong>
-              <p className="muted">Setiap wangi memiliki karakter tersendiri yang mudah dikenali.</p>
+        <div className="section-header center">
+          <h2>The Experience</h2>
+          <div className="divider"></div>
+        </div>
+        
+        <div className="why-grid">
+          {reasons.map((item, index) => (
+            <div className="why-card" key={index}>
+              <div className="icon-wrapper">
+                <i className={`${item.icon} icon`} aria-hidden></i>
+              </div>
+              <h3>{item.title}</h3>
+              <p className="muted">{item.desc}</p>
             </div>
-          </li>
-          <li>
-            <i className="fas fa-leaf icon" aria-hidden></i>
-            <div>
-              <strong>Bahan berkualitas</strong>
-              <p className="muted">Formula yang tahan lama dengan bahan pilihan.</p>
-            </div>
-          </li>
-          <li>
-            <i className="fas fa-thumbs-up icon" aria-hidden></i>
-            <div>
-              <strong>Dipercaya konsumen</strong>
-              <p className="muted">Ulasan positif dan repeat order dari pelanggan.</p>
-            </div>
-          </li>
-        </ul>
+          ))}
+        </div>
       </div>
     </section>
   )

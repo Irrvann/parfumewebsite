@@ -5,14 +5,16 @@ const Hero = () => {
 
   return (
     <section className="hero-section">
+      <div className="hero-overlay"></div>
       <div className="container hero-inner">
-        <div>
-          <h1 className="brand">Men Parfume</h1>
-          <p className="tagline">Parfume berkarakter—unik, tahan lama, dan beda dari yang lain.</p>
-          <a className="btn primary" href={wa} target="_blank" rel="noreferrer">Beli Sekarang</a>
-        </div>
-        <div className="hero-image" aria-hidden>
-          {/* decorative area */}
+        <div className="hero-content">
+          <span className="hero-subtitle">Premium Collection</span>
+          <h1 className="brand">Men Parfume.</h1>
+          <p className="tagline">Definisikan karaktermu dengan aroma yang tak terlupakan. Elegan, maskulin, dan tahan lama.</p>
+          <div className="hero-actions">
+            <a className="btn primary" href={wa} target="_blank" rel="noreferrer">Beli Sekarang</a>
+            <a className="btn text-link" href="#products">Lihat Katalog</a>
+          </div>
         </div>
       </div>
     </section>
